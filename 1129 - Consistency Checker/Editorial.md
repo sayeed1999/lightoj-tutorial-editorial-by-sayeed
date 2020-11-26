@@ -9,7 +9,8 @@ You will be given some numbers with length 1-10. And you have to find "is atleas
 
 How will be the trie node? Since a number can have digit only between 0-9, then the trie node will have one boolean variable and an array of trie nodes of length 10. Once you complete inserting the numbers as strings into the trie, you will write a function which will check if a single string is a prefix of another or not, and the function will return true or false. Based on that, you got your answer. :)
  
-###Code: [Accepted Solution]()
+### Code: (C++ solution)
+This is an accepted solution of mine!
 ```
 #include<iostream>
 #include<stdio.h>
@@ -73,7 +74,7 @@ bool isPrefix(trie *node)
     return 0;
 }
 
-int main(void)
+int main()
 {
     int t=0,tc=0;
     scanf(" %d", &tc);

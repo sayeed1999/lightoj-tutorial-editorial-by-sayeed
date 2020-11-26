@@ -1,8 +1,8 @@
 # 1129 - Consistency Checker
 
-**Problem Link:** [click here to go to problem page](http://lightoj.com/volume_showproblem.php?problem=1129)
+**Problem Link:** [click here](http://lightoj.com/volume_showproblem.php?problem=1129)
 
-**Algorithm:** [Trie Tree Data Structure](http://www.shafaetsplanet.com/?p=1679) Shafaetsplanet blog has really awesome tutorial on trie data structure. Also you can learn from anywhere.
+**Algorithm:** [Trie Tree Data Structure on Shafaetsplanet](http://www.shafaetsplanet.com/?p=1679) **Shafaetsplanet** blog has really awesome tutorial on trie data structure. Also you can learn from anywhere.
 
 ### Theory:
 If you have learnt **trie data structure** well, this problem is really easy for you.

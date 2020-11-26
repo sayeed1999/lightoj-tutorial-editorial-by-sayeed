@@ -13,7 +13,7 @@ You will be given some numbers with length 1-10. And you have to find **"is atle
 
 ### Code: (C++ solution)
 This is an accepted solution of mine!
-```
+```cpp
 #include<iostream>
 #include<stdio.h>
 using namespace std;

@@ -4,18 +4,21 @@ In this problem, you will be given `T` testcases. The first line of each test ca
 
 To recap, a substring of a string from its 0th index is a prefix of that string. Like `123` is a prefix of `12345`, but `124`, `234`, or `132` is not.
 
-This is a great problem to start **Trie Data Structure** if you haven't already. **Tries** are an extremely special and useful data-structure that are based on the prefix of a string. They are used to represent the **“Retrieval”** of data.
+This is a great problem to start **Trie Data Structure** if you haven't already.
+**Tries** are an extremely special and useful data-structure that are based on the prefix of a string. They are used to represent the **“Retrieval”** of data.
 
-Here are some resources you can understand and learn trie data structure:-
+Here are some resources to trie data structure you can understand and learn:-
 
 - [Shafaetsplanet](http://www.shafaetsplanet.com/?p=1679)
 - [HackerRank](https://m.youtube.com/watch?v=zIjfhVPRZCg&list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX&index=9&t=1s)
 - [Tushar Roy - Coding Made Easy](https://m.youtube.com/watch?v=AXjmTQ8LEoI)
 
-How will be the trie node?! Since a number can have digit only between 0-9, then the trie node will have one boolean variable and an array of trie nodes of length 10. Once you complete inserting the numbers as strings into the trie, you will write a function which will check if a single string is a prefix of another or not, and the function will return true or false. Based on that, you got your answer. :)
+### Approach:
+
+The best way to take the `n` numbers from the input is as strings. Because trie deals with the prefix of a string. If we want to take `n` numbers as integers, we can. Because integer data type can hold between `-2147483648` to `2147483647` which will be enough to hold an integer of length 1-10. But still that won't be a smart approach.
 
 ### Code: (C++ solution)
-This is an accepted solution of mine!
+
 ```cpp
 #include<iostream>
 #include<stdio.h>
@@ -48,12 +51,9 @@ void insert(char s[])
     {
         int x = int(s[i]-'0');
         if(curr->arr[x]==NULL) curr->arr[x] = new trie();
-        if(i+1==n) {
-            curr->arr[x]->endmark = 1;
-            break;
-        }
         curr = curr->arr[x];
     }
+    curr->endmark = 1;
 }
 
 void del(trie* node)

@@ -2,6 +2,7 @@
 
 In this problem, you will be given `T` testcases. The first line of each test case contains an integer `n`. Following `n` lines will contain DNA sample string of length `1-50` each. You are asked to calculate the maximum value of (length of common prefix * number of DNA samples shared).
 
+A simple visualization:
 ```
 If two DNA samples are 'ACGTACGT' and 'ACG', here answer will be 08.
 Because, length of 'ACGTACGT' is 08. Value = 8*1 = 8.
@@ -23,17 +24,21 @@ Atfirst, we create a trie for each new testcase. A single node of trie data stru
 
 Visualization-
 ```
-//A trie with two strings inserted, "123" and "12345"
+//A trie with two DNA strings inserted, "ACGACG" and "ACGTACG"
 
-        1(false)
-         \
-          2(false)
-           \
-            3(true) <-- ending of string "123" but not the leaf node!
+            A(count=2)
              \
-              4(false)
+              C(count=2)
                \
-                5(true) <-- ending of string "12345" and it is a leaf node
+                G(count=2) //value = 3*2 = 6;
+               / \
+     (count=1)A   T(count=1)
+             /     \
+   (count=1)C       A(count=1)
+           /         \
+ (count=1)G           C(count=1)
+                       \
+                        G(count=1) //value = 7*1=7;
 ```
 
 Lastly, after the answer is got, we delete the trie from the memory to avoid memory wastage in our program.

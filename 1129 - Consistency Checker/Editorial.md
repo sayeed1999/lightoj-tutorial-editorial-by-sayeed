@@ -15,7 +15,11 @@ Here are some resources to trie data structure you can understand and learn:-
 
 ### Approach:
 
+Atfirst, we create a trie for each new testcase. A single node of trie data structure will contain a `boolean` variable and an `array` of trie nodes of length `10`. The boolean variable will say if a string end on that node or not. The 10 size array will be enough for the next adjacent digit of the number because different digits can be atmost 10 (0-9).
+
 The best way to take the `n` numbers from the input is as strings. Because trie deals with the prefix of a string. If we want to take `n` numbers as integers, we can. Because integer data type can hold between `-2147483648` to `2147483647` which will be enough to hold an integer of length 1-10. But still that won't be a smart approach.
+
+So we simply take the `n` input numbers as strings and insert into the trie.
 
 ### Code: (C++ solution)
 

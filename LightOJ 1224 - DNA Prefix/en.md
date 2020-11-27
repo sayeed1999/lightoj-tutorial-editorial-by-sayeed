@@ -1,6 +1,6 @@
 # LightOJ 1224 - DNA Prefix
 
-In this problem, you will be given `T` testcases. The first line of each test case contains an integer `n`. Following `n` lines will contain DNA sample string of length `1-50` each. You are asked to calculate the maximum value of (length of common prefix * number of DNA samples shared).
+In this problem, you will be given `T` testcases. The first line of each test case contains an integer `n`. Following `n` lines will contain DNA sample string of length `1-50` each. You are asked to calculate the `maximum value` of `(length of common prefix * number of DNA samples shared)`.
 
 A simple visualization:
 ```
@@ -20,7 +20,7 @@ If you haven't learnt trie data structure, here are some resources to trie data 
 
 ### Approach:
 
-Atfirst, we create a trie for each new testcase. A single node of trie data structure will contain an `integer` variable and an `array` of trie nodes of length `4`. You may have noticed trie usually contains a `boolean` variable, but I am taking an `integer` instead. This is a slight change you need to make for this problem on purpose. Because if you look carefully on the problem statement, we don't need the boolean endmark on where a DNA string ends. We just need the prefix. I used the `integer` variable named 'count' to count the times of each node being visited while inserting the DNA strings into the trie. This count variable is dynamically keeping track of a single node being used in how many DNA strings.
+Atfirst, we create a trie for each new testcase. A single node of trie data structure will contain an `integer` variable and an `array` of trie nodes of length `4`. Since DNA string contains letters between {A,C,G,T}, a four sized array is perfect. Ofcourse, we won't want unnecessary occupying of extra memory in our program to avoid `MLE`(Memory Limit Exceeded). You may have noticed trie usually contains a `boolean` variable, but I am taking an `integer` instead. This is a slight change you need to make for this problem on purpose. Because if you look carefully on the problem statement, we don't need the boolean endmark on where a DNA string ends. We just need the prefix. I used the `integer` variable named 'count' to count the times of each node being visited while inserting the DNA strings into the trie. This count variable is dynamically keeping track of a single node being used in how many DNA strings.
 
 Visualization-
 ```

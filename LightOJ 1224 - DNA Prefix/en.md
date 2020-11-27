@@ -30,7 +30,7 @@ Visualization-
              \
               C(count=2)
                \
-                G(count=2) //value = 3*2 = 6;
+                G(count=2) //value = 3*2 = 6; because 03 length prefix is shared by 2 DNA strings
                / \
      (count=1)A   T(count=1)
              /     \
@@ -38,12 +38,12 @@ Visualization-
            /         \
  (count=1)G           C(count=1)
                        \
-                        G(count=1) //value = 7*1=7;
+                        G(count=1) //value = 7*1=7; 7 length prefix is shared by 1 DNA strings
 ```
 
 Lastly, after the answer is got, we delete the trie from the memory to avoid memory wastage in our program.
 
-Try yourself before watching the code below.
+Try to code yourself before watching the code below.
 
 ### Code: (C++ solution)
 

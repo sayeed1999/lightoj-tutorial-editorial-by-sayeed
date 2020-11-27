@@ -19,9 +19,21 @@ Atfirst, we create a trie for each new testcase. A single node of trie data stru
 
 The best way to take the `n` numbers from the input is as strings. Because trie deals with the prefix of a string. If we want to take `n` numbers as integers, we can. Because integer data type can hold between `-2147483648` to `2147483647` which will be enough to hold an integer of length 1-10. But still that won't be a smart approach.
 
-So we simply take the `n` input numbers as strings and insert into the trie. Once the trie is formed, we create a function `isPrefix()` which will check if there is a single number prefix of another number or not in the trie. How will the function check!? The function will traverse the trie, and if there is a single node which has the boolean variable value `true` but more trie nodes emit from that node, this confirms that it is a prefix!
+So we simply take the `n` input numbers as strings and insert into the trie. Once the trie is formed, we create a function `isPrefix()` which will check if there is a single number prefix of another number or not in the trie. How will the function check? The function will traverse the trie, and if there is a single node which has the boolean variable value `true` but more trie nodes emit from that node, this confirms that it is a prefix.
 
-Example, if our trie consists of two numbers 123 and 12345, at the node for digit 3, there is a number ending but still more node coming out from it. So, this confirms that the dataset is not consistent.
+Example, if our trie consists of two numbers `123` and `12345`, at the node for digit `3`, there is a number ending but still more node coming out from it. So, this confirms that the dataset is not consistent.
+Visualization-
+```
+        1(false)
+         \
+          2(false)
+           \
+            3(true) <-- ending of one line but not the leaf node!
+             \
+              4(false)
+               \
+                5(true)
+```
 
 Lastly, after the answer is got, we delete the trie from the memory to avoid memory wastage in our program.
 

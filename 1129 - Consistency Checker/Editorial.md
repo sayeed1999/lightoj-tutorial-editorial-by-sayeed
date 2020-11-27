@@ -2,8 +2,15 @@
 
 In this problem, you will be given `T` testcases. The first line of each test case contains an integer `n`. Following `n` lines will contain a number of length 1-10 each. You are asked to check the consistency of the dataset. The consistency is, no number is a prefix of another number.
 
-To recap, a substring of a string from its 0th index is a prefix of that string. Like `123` is a prefix of `12345`, but `124` or `132` is not.
+To recap, a substring of a string from its 0th index is a prefix of that string. Like `123` is a prefix of `12345`, but `124`, `234`, or `132` is not.
 
+This is a great problem to start **Trie Data Structure** if you haven't already. **Tries** are an extremely special and useful data-structure that are based on the prefix of a string. They are used to represent the **“Retrieval”** of data.
+
+Here are some resources you can understand and learn trie data structure:-
+
+- [Shafaetsplanet](http://www.shafaetsplanet.com/?p=1679)
+- [HackerRank](https://m.youtube.com/watch?v=zIjfhVPRZCg&list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX&index=9&t=1s)
+- [Tushar Roy - Coding Made Easy](https://m.youtube.com/watch?v=AXjmTQ8LEoI)
 
 How will be the trie node?! Since a number can have digit only between 0-9, then the trie node will have one boolean variable and an array of trie nodes of length 10. Once you complete inserting the numbers as strings into the trie, you will write a function which will check if a single string is a prefix of another or not, and the function will return true or false. Based on that, you got your answer. :)
 

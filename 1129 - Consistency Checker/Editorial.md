@@ -1,15 +1,11 @@
 # 1129 - Consistency Checker
 
-**Problem Link:** [click here](http://lightoj.com/volume_showproblem.php?problem=1129)
+In this problem, you will be given `T` testcases. The first line of each test case contains an integer `n`. Following `n` lines will contain a number of length 1-10 each. You are asked to check the consistency of the dataset. The consistency is, no number is a prefix of another number.
 
-**Algorithm:** [Trie Tree Data Structure on Shafaetsplanet](http://www.shafaetsplanet.com/?p=1679) **Shafaetsplanet** blog has really awesome tutorial on trie data structure. Also you can learn from anywhere.
+To recap, a substring of a string from its 0th index is a prefix of that string. Like `123` is a prefix of `12345`, but `124` or `132` is not.
 
-### Theory:
-If you have learnt **trie data structure** well, this problem is really easy for you.
 
-You will be given some numbers with length 1-10. And you have to find **"is atleast one number is a prefix of another number or not"**. (To recap, a substring from the 0th index of a string is a prefix of that string. Ex- **123** is a prefix of **12345**, but **124**, **132** or **234** is not a prefix of **12345**.) So simply take the numbers as strings and insert the strings into the trie tree.
-
-**How will be the trie node?!** Since a number can have digit only between 0-9, then the trie node will have one boolean variable and an array of trie nodes of length 10. Once you complete inserting the numbers as strings into the trie, you will write a function which will check if a single string is a prefix of another or not, and the function will return true or false. Based on that, you got your answer. :)
+How will be the trie node?! Since a number can have digit only between 0-9, then the trie node will have one boolean variable and an array of trie nodes of length 10. Once you complete inserting the numbers as strings into the trie, you will write a function which will check if a single string is a prefix of another or not, and the function will return true or false. Based on that, you got your answer. :)
 
 ### Code: (C++ solution)
 This is an accepted solution of mine!

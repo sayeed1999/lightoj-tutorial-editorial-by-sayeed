@@ -1,4 +1,4 @@
-# 1129 - Consistency Checker
+# LOJ 1129 - Consistency Checker
 
 In this problem, you will be given `T` testcases. The first line of each test case contains an integer `n`. Following `n` lines will contain a number of length 1-10 each. You are asked to check the consistency of the dataset. The consistency is, no number is a prefix of another number.
 

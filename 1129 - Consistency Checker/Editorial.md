@@ -22,8 +22,11 @@ The best way to take the `n` numbers from the input is as strings. Because trie 
 So we simply take the `n` input numbers as strings and insert into the trie. Once the trie is formed, we create a function `isPrefix()` which will check if there is a single number prefix of another number or not in the trie. How will the function check? The function will traverse the trie, and if there is a single node which has the boolean variable value `true` but more trie nodes emit from that node, this confirms that it is a prefix.
 
 Example, if our trie consists of two numbers `123` and `12345`, at the node for digit `3`, there is a number ending but still more node coming out from it. So, this confirms that the dataset is not consistent.
+
 Visualization-
 ```
+//A trie with two strings inserted, "123" and "12345"
+
         1(false)
          \
           2(false)

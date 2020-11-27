@@ -19,7 +19,9 @@ Atfirst, we create a trie for each new testcase. A single node of trie data stru
 
 The best way to take the `n` numbers from the input is as strings. Because trie deals with the prefix of a string. If we want to take `n` numbers as integers, we can. Because integer data type can hold between `-2147483648` to `2147483647` which will be enough to hold an integer of length 1-10. But still that won't be a smart approach.
 
-So we simply take the `n` input numbers as strings and insert into the trie.
+So we simply take the `n` input numbers as strings and insert into the trie. Once the trie is formed, we create a function `isPrefix()` which will check is there a single number prefix of another number or not in the trie. How will the function check!? The function will traverse the trie, and if there is a single node which has the boolean variable value `true` but more trie nodes emit from that node, that confirms that it is a prefix.
+
+Lastly, after the answer is got, we delete the trie from the memory to avoid memory wastage in our program.
 
 ### Code: (C++ solution)
 
